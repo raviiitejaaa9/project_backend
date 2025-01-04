@@ -140,8 +140,8 @@ app.get("/profile/:id", async(request,response) => {
     const {id} = request.params 
 
     const getUserDetails = `
-        SELECT * 
-        FROM users 
+        SELECT userId, firstName, lastName, mobileNumber, email
+        FROM users
         WHERE userId = ?;
     `;
 
